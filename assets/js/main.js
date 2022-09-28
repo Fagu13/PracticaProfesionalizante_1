@@ -114,4 +114,23 @@
 
 			});
 
+			// Lightbox gallery.
+			$window.on('load', function() {
+
+				$('#galery').poptrox({
+					caption: function($a) { return $a.next().text(); },
+					overlayColor: '#2c2c2c',
+					overlayOpacity: 0.85,
+					popupCloserText: '',
+					popupLoaderText: '',
+					selector: '.work-item a.image',
+					usePopupCaption: false,
+					usePopupDefaultStyling: false,
+					usePopupEasyClose: false,
+					usePopupNav: true,
+					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				});
+
+			});
+
 })(jQuery);
