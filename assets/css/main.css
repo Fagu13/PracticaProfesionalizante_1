@@ -110,14 +110,13 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: grey;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: black !important;
 			text-decoration: none;
 		}
 
@@ -1841,7 +1840,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: black;
 		}
 
 	select {
@@ -3278,11 +3277,74 @@ input, select, textarea {
 		color: #1f1815;
 		margin-bottom: -20px;
 		font-size:80px;
+		font-family: 'Barlow Condensed', sans-serif;
 
 	 }
 	
-	
-	
-	
+	 .btn {		
+		position: relative;	
+		padding: 1.4rem 4.2rem;
+		padding-right: 3.1rem;
+		font-size: 1.4rem;
+		color:grey;
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;	
+		cursor: pointer;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+			-ms-user-select: none;
+				user-select: none;
+				background-color:#fff7e1 ;
+				font-family: 'Barlow Condensed', sans-serif;
+				
 
+	}
+	
+	.btn:before, .btn:after {
+		content: '';
+		position: absolute;		
+		transition: inherit;
+		z-index: -1;
+	}
+	
+	.btn:hover {
+		color: black;
+				transition-delay: .5s;
+	}
+	
+	.btn:hover:before {
+		-webkit-transition-delay: 0s;
+				transition-delay: 0s;
+	}
+	
+	.btn:hover:after {
+		background: blue;
+		-webkit-transition-delay: .35s;
+				transition-delay: .35s;
+	}
 
+	.from-bottom:before, 
+.from-bottom:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-bottom:before {
+	top: 0;	
+	border: 1px solid;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-bottom:after {
+	bottom: 0;
+	height: 0;
+}
+
+.from-bottom:hover:before,
+.from-bottom:hover:after {
+	height: 100%;
+}
+ 
+ 
